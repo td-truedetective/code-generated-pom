@@ -4,6 +4,8 @@
   <modelVersion>4.0.0</modelVersion>
   <artifactId>MyTestingApp</artifactId>
   <name>MyTestingApp</name>
+  <groupId>com.test</groupId>
+  <version>1.0.PRD</version>
   <description>MyTestingApp</description>
   <properties>
     <findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
