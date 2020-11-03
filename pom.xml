@@ -58,10 +58,10 @@
     <mariadb.version>2.6.0</mariadb.version>
   </properties>
   <dependencies>
-    <dependency>
+     <!--<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasper-custom-font-arial</artifactId>
