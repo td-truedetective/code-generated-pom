@@ -2,131 +2,205 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.inn</groupId>
-  <version>1.0</version>
   <artifactId>MyTestingApp</artifactId>
   <name>MyTestingApp</name>
   <description>MyTestingApp</description>
   <properties>
-    <commons.version>2.3.0</commons.version>
+    <findbugs-maven-plugin.version>3.0.5</findbugs-maven-plugin.version>
+    <physical.inventory.logistics.version>1.0.0.PRD</physical.inventory.logistics.version>
+    <httpclient.version>4.5.12</httpclient.version>
+    <reporting.version>7.1</reporting.version>
+    <hibernate.version>5.4.20.Final</hibernate.version>
+    <jacoco-maven-plugin.version>0.8.5</jacoco-maven-plugin.version>
     <proguard.silent>false</proguard.silent>
-    <product.version>3.1.0.DEV</product.version>
-    <mysql-connector-java.version>5.1.30</mysql-connector-java.version>
-    <hadoop.version>3.1.1.3.1.4.43-3</hadoop.version>
-    <maven.javadoc.skip>true</maven.javadoc.skip>
-    <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
-    <jbcrypt.version>0.4</jbcrypt.version>
-    <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
-    <websocket.version>9.3.0.M2</websocket.version>
-    <phoenix.version>5.0.0.3.1.4.43-3</phoenix.version>
-    <log4j.version>2.10.0</log4j.version>
-    <junit.version>4.12</junit.version>
-    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-    <output.dir>.</output.dir>
-    <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-    <proguard.conf>${project.basedir}/../conf/proguard.conf</proguard.conf>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <activiti.version>6.0.0</activiti.version>
-    <h2.version>1.4.185</h2.version>
-    <sonar.jacoco.outputDir>${project.basedir}/target/site/jacoco-aggregate</sonar.jacoco.outputDir>
-    <version.spring>3.0.2.RELEASE</version.spring>
-    <javamelody.version>1.82.0</javamelody.version>
-    <spark.version>2.3.1.3.0.1.0-187</spark.version>
-    <source.skip>true</source.skip>
-    <mongojack.version>2.3.0</mongojack.version>
-    <rcp-security-api.version>1.0.DEV</rcp-security-api.version>
-    <scala.version>2.11</scala.version>
-    <swagger-models.version>1.5.21</swagger-models.version>
-    <spring-kafka.version>2.3.6.RELEASE</spring-kafka.version>
-    <jboss.logging.version>3.4.1.Final</jboss.logging.version>
-    <keycloak.version>8.0.1</keycloak.version>
-    <jersey.version>2.18</jersey.version>
-    <checkstyle.conf>${project.basedir}/../conf/checkstyle.xml</checkstyle.conf>
-    <rcp-um-api.version>1.0.DEV</rcp-um-api.version>
-    <mongo.java.driver.version>3.0.0</mongo.java.driver.version>
-    <commons-spatial.version>1.0.6</commons-spatial.version>
-    <lucene.version>7.0.0</lucene.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <swagger.version>2.9.2</swagger.version>
-    <hibernate.version>5.1.0.Final</hibernate.version>
+    <product-um-api.version>3.0.14.PRD</product-um-api.version>
+    <new.spec.version>${next.final.spec.version}</new.spec.version>
+    <gcm-server.version>1.1.0</gcm-server.version>
+    <commons.unit.version>3.1.3</commons.unit.version>
+    <jsf.version>2.4.0</jsf.version>
+    <jacoco.outputDir>${project.basedir}/target/site/jacoco-aggregate</jacoco.outputDir>
+    <custom.rakuten.femto.version>1.0.2.PRD</custom.rakuten.femto.version>
+    <spring.elasticsearch.version>0.3.0</spring.elasticsearch.version>
+    <product.version>3.0.14.PRD</product.version>
+    <npi.version>1.0.0.PRD</npi.version>
+    <physical.inventory.core.version>1.0.0.PRD</physical.inventory.core.version>
+    <geotools.version>19.2</geotools.version>
+    <poi.version>3.15</poi.version>
+    <spec.version.revision></spec.version.revision>
     <java.version>1.8</java.version>
-    <workflow.version>1.1.43.DEV</workflow.version>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <hbase.version>2.0.0.3.0.1.0-187</hbase.version>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <keycloak.version>8.0.1</keycloak.version>
+    <docker.tag>7</docker.tag>
+    <clirr.skip>true</clirr.skip>
+    <product-base-plateform-service.version>3.0.14.PRD</product-base-plateform-service.version>
+    <clirr-maven-plugin.version>2.8</clirr-maven-plugin.version>
+    <jersey.version>2.18</jersey.version>
+    <pentaho-database-model.version>7.1.0.0-12</pentaho-database-model.version>
+    <maven-javadoc-plugin.version>3.2.0</maven-javadoc-plugin.version>
+    <workflow.management.version>1.0.13.PRD</workflow.management.version>
+    <mapper-attachment.version>1.8.0</mapper-attachment.version>
+    <next.final.spec.version>2.1</next.final.spec.version>
+    <pentaho.library>7.1.0.0-12</pentaho.library>
+    <output.dir>target</output.dir>
+    <commons-text.version>1.9</commons-text.version>
+    <plexus-utils.version>3.3.0</plexus-utils.version>
+    <minio.version>7.1.0</minio.version>
+    <product.keycloak.version>3.0.8.PRD</product.keycloak.version>
+    <site.management.version>1.0.8.PRD</site.management.version>
+    <apidocs.title>JAX-RS ${spec.version} API Specification ${spec.version.revision}</apidocs.title>
+    <product.number.manager.version>3.0.4.PRD</product.number.manager.version>
+    <lucene.version>7.0.0</lucene.version>
+    <spring-kafka.version>2.3.6.RELEASE</spring-kafka.version>
+    <previous.version>3.2.5</previous.version>
+    <mariadb-java-client.version>2.6.2</mariadb-java-client.version>
+    <checkstyle.skip>false</checkstyle.skip>
+    <product-security-api.version>3.0.14.PRD</product-security-api.version>
+    <product-geo-api.version>3.0.14.PRD</product-geo-api.version>
+    <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+    <pentaho.latest.dev>1.0.DEV</pentaho.latest.dev>
+    <physical.inventory.module.version>1.0.9.PRD</physical.inventory.module.version>
+    <pentaho.reporting.classic-core.version>7.1.0.0-12-R</pentaho.reporting.classic-core.version>
+    <rdc.version>1.0.0.PRD</rdc.version>
+    <sfproduct-util.version>1.0.DEV</sfproduct-util.version>
+    <maven.bundle.plugin.version>3.3.0</maven.bundle.plugin.version>
+    <hadoop.version>3.1.1.3.0.1.0-187</hadoop.version>
+    <findbugs.skip>false</findbugs.skip>
+    <finalName>app</finalName>
+    <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
     <springfox-swagger.version>2.9.2</springfox-swagger.version>
-    <jacoco.outputDir>${project.basedir}/../target/site/jacoco-aggregate</jacoco.outputDir>
-    <swagger-annotations.version>1.5.21</swagger-annotations.version>
+    <pentaho.reporting.version>7.1.0.0-12</pentaho.reporting.version>
+    <scala.version>2.11</scala.version>
+    <risk.management.version>1.0.0.PRD</risk.management.version>
+    <core.version>3.0.14.PRD</core.version>
+    <reflections.version>0.9.12</reflections.version>
     <mariadb.version>2.6.0</mariadb.version>
+    <budget.management.version>1.0.0.PRD</budget.management.version>
+    <um.version>3.0.14.PRD</um.version>
+    <rsql-parser.version>2.1.0</rsql-parser.version>
+    <proguard.skip>false</proguard.skip>
+    <mongo.version>2.12.2</mongo.version>
+    <maven-checkstyle-plugin.version>3.1.1</maven-checkstyle-plugin.version>
+    <icr.version>1.0.0.PRD</icr.version>
+    <fttx.version>1.0.0.PRD</fttx.version>
+    <checkstyle.conf>${project.basedir}/../conf/checkstyle.xml</checkstyle.conf>
+    <solr.version>4.0.0</solr.version>
+    <product-geo-service.version>3.0.14.PRD</product-geo-service.version>
+    <checklist.builder.version>1.0.0.PRD</checklist.builder.version>
+    <jboss.logging.version>3.4.1.Final</jboss.logging.version>
+    <commons-logging.version>1.2</commons-logging.version>
+    <commons-configuration.version>1.10</commons-configuration.version>
+    <zip4j.version>2.6.1</zip4j.version>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <joda-time.version>2.10.6</joda-time.version>
+    <spark.version>2.3.1.3.0.1.0-187</spark.version>
+    <findbugs.conf>${basedir}/../conf/findbugs-exclude.xml</findbugs.conf>
+    <commons-collections.version>3.2.2</commons-collections.version>
+    <maven.compiler.plugin.version>3.6.1</maven.compiler.plugin.version>
+    <commons-io.version>2.7</commons-io.version>
+    <version.spring>3.0.2.RELEASE</version.spring>
+    <stakeholder.version>1.0.0.PRD</stakeholder.version>
+    <kafka.version>1.1.1.3.0.1.0-187</kafka.version>
+    <program.management.version>1.0.0.PRD</program.management.version>
+    <commons-codec.version>1.14</commons-codec.version>
+    <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+    <proguard.conf>${project.basedir}/../conf/proguard.conf</proguard.conf>
+    <javax.mail.version>1.6.2</javax.mail.version>
+    <proguard.version>6.2.0</proguard.version>
+    <view.builder.version>1.0.0.PRD</view.builder.version>
+    <sla.version>1.0.0.PRD</sla.version>
+    <non.final>true</non.final>
+    <timesheet.version>1.0.0.PRD</timesheet.version>
+    <milestone.number>01</milestone.number>
+    <jacoco.skip>false</jacoco.skip>
+    <spring-security-saml2-core.version>1.0.9.RELEASE</spring-security-saml2-core.version>
+    <meeting.management.version>1.0.0.PRD</meeting.management.version>
+    <sfproduct.util.version>1.0.PRD</sfproduct.util.version>
+    <javapns-jdk16.version>2.4.0</javapns-jdk16.version>
+    <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+    <activiti.version>6.0.0</activiti.version>
+    <phoenix.version>5.0.0.3.0.1.0-187</phoenix.version>
+    <physical.inventory.asset.version>1.0.0.PRD</physical.inventory.asset.version>
+    <hbase.version>2.0.0.3.0.1.0-187</hbase.version>
+    <tika.version>1.2</tika.version>
+    <ha-javamail.version>1.0-beta-1</ha-javamail.version>
+    <custom.rakuten.version>1.0.PRD</custom.rakuten.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <kettle.version>7.1.0.0-12</kettle.version>
+    <maven.javadoc.plugin.version>2.10.4</maven.javadoc.plugin.version>
+    <commons-net.version>3.7</commons-net.version>
+    <spring-ysql.version>2.1.10-yb-1</spring-ysql.version>
+    <jbcrypt.version>0.4</jbcrypt.version>
+    <junit.version>4.13</junit.version>
+    <workflow.version>1.0.16.PRD</workflow.version>
+    <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
+    <project.management.version>1.0.6.PRD</project.management.version>
+    <awaitility.version>4.0.3</awaitility.version>
+    <knowledge.center.version>1.0.0.PRD</knowledge.center.version>
+    <application.configuration.version>1.0.DEV</application.configuration.version>
+    <fsriver.version>0.3.0</fsriver.version>
+    <startup.class>tests.RestAPITest</startup.class>
+    <shc.version>1.1.3-2.3-s_2.11-hdp_187</shc.version>
+    <commons.version>2.6.0</commons.version>
+    <physical.inventory.version>1.0.0.PRD</physical.inventory.version>
+    <slf4j.version>1.7.30</slf4j.version>
+    <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+    <offline.reporting.version>1.0.1.PRD</offline.reporting.version>
+    <last.final.spec.version>2.1</last.final.spec.version>
+    <drools.version>6.5.0.Final</drools.version>
+    <commons-spatial.version>1.0.6</commons-spatial.version>
+    <commons-csv.version>1.8</commons-csv.version>
+    <project.management.local.version>1.0.6.PRD</project.management.local.version>
+    <poi-ooxml.version>4.1.2</poi-ooxml.version>
+    <log4j.version>2.10.0</log4j.version>
+    <spec.version>${last.final.spec.version}</spec.version>
+    <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+    <httpcore.version>4.4.13</httpcore.version>
+    <yugabyte-cassandra.version>3.8.0-yb-5</yugabyte-cassandra.version>
+    <apns.version>0.2.3</apns.version>
+    <commons-collections4.version>4.4</commons-collections4.version>
+    <sfproduct.version>1.0.PRD</sfproduct.version>
+    <spring-security-oauth2.version>2.1.0.RELEASE</spring-security-oauth2.version>
+    <guava.version>29.0-jre</guava.version>
+    <jbossJ2ee.version>4.2.2.GA</jbossJ2ee.version>
+    <javamelody.version>1.85.0</javamelody.version>
+    <jsch.version>0.1.55</jsch.version>
+    <security.version>3.0.14.PRD</security.version>
+    <flume.version>1.6.0</flume.version>
+    <physical.inventory.payment.version>1.0.1.DEV</physical.inventory.payment.version>
+    <commons-cli.version>1.4</commons-cli.version>
+    <gson.version>2.8.6</gson.version>
+    <physical.inventory.facility.design.template.version>1.0.0.PRD</physical.inventory.facility.design.template.version>
+    <sonar.coverage.exclusions>src/main/java/com/inn/commons/hadoop/*.java</sonar.coverage.exclusions>
+    <jackrabbit.version>2.8.0</jackrabbit.version>
+    <suite.name>rakuten-APIAutomation</suite.name>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <commons-lang3.version>3.11</commons-lang3.version>
+    <proguard-maven-plugin.version>2.1.1</proguard-maven-plugin.version>
+    <physical.inventory.facility.designer.version>1.0.0.PRD</physical.inventory.facility.designer.version>
+    <commons-pool2.version>2.8.1</commons-pool2.version>
+    <HikariCP.version>3.4.5</HikariCP.version>
+    <product-base-plateform-api.version>3.0.14.PRD</product-base-plateform-api.version>
+    <rsql-jpa.version>2.0.2</rsql-jpa.version>
+    <pentaho.latest>7.1.0.0-12</pentaho.latest>
+    <skip.release.tests>false</skip.release.tests>
+    <name.management.version>3.1.0.DEV</name.management.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <contract.management.version>1.0.0.PRD</contract.management.version>
   </properties>
   <dependencies>
-     <!--<dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>net.sf.jasperreports</groupId>
-      <artifactId>jasper-custom-font-arial</artifactId>
-      <version>1.0.0</version>
-    </dependency>
-  <!--  <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>draggabilly</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>opensymphony</groupId>
-      <artifactId>oscache</artifactId>
-      <version>2.4.1</version>
     </dependency>
     <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>3.2.5</version>
+      <groupId>com.adobe.blazeds</groupId>
+      <artifactId>blazeds-core</artifactId>
+      <version>3.2.0</version>
     </dependency>
     <dependency>
-      <groupId>org.xerial</groupId>
-      <artifactId>sqlite-jdbc</artifactId>
-      <version>3.21.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.codehaus.cargo</groupId>
-      <artifactId>cargo-core-api-container</artifactId>
-      <version>1.1.3</version>
-    </dependency>
-    <dependency>
-      <groupId>javax.websocket</groupId>
-      <artifactId>javax.websocket-client-api</artifactId>
-      <version>1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.github.openjson</groupId>
-      <artifactId>openjson</artifactId>
-      <version>1.0.11</version>
-    </dependency>
-    <dependency>
-      <groupId>net.sf</groupId>
-      <artifactId>ha-javamail</artifactId>
-      <version>1.0-beta-1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.neovisionaries</groupId>
-      <artifactId>nv-websocket-client</artifactId>
-      <version>2.8</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-jcl</artifactId>
-      <version>${log4j.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <!--<dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>jquery</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>bootstrap</artifactId>
-      <version>3.3.7</version>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-services</artifactId>
+      <version>${keycloak.version}</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
@@ -134,23 +208,41 @@
       <version>${keycloak.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>1.3.2</version>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming-kafka-0-10_${scala.version}</artifactId>
+      <version>${spark.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.groovy</groupId>
-      <artifactId>groovy-all</artifactId>
-      <version>2.4.11</version>
-    </dependency>
-    <!--<dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>ekko-lightbox</artifactId>
+      <groupId>org.activiti</groupId>
+      <artifactId>activiti-json-converter</artifactId>
+      <version>${activiti.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.kurento</groupId>
-      <artifactId>kurento-client</artifactId>
-    </dependency>-->
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>2.0.2-beta</version>
+    </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>pentaho-xul-core</artifactId>
+      <version>${pentaho.reporting.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.0.16.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.jms</groupId>
+      <artifactId>jms</artifactId>
+      <version>1.1</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-sql_${scala.version}</artifactId>
@@ -163,36 +255,87 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-services</artifactId>
-      <version>${keycloak.version}</version>
-      <scope>provided</scope>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libcss</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.hibernate.validator</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>6.0.16.Final</version>
+      <groupId>math.geom2d</groupId>
+      <artifactId>javaGeom</artifactId>
+      <version>0.11.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-cas</artifactId>
+      <version>5.2.0.RELEASE</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>io.swagger</groupId>
-      <artifactId>swagger-parser</artifactId>
-      <version>1.0.51</version>
+      <artifactId>swagger-core</artifactId>
+      <version>1.5.22</version>
     </dependency>
     <dependency>
-      <groupId>org.activiti</groupId>
-      <artifactId>activiti-json-converter</artifactId>
-      <version>${activiti.version}</version>
+      <groupId>org.camunda.bpm</groupId>
+      <artifactId>camunda-root</artifactId>
+      <version>7.12.0-SNAPSHOT</version>
+      <type>pom</type>
+      <scope>import</scope>
     </dependency>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
+      <groupId>org.apache.kylin</groupId>
+      <artifactId>kylin-jdbc</artifactId>
+      <version>2.6.4</version>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-client</artifactId>
-      <version>${websocket.version}</version>
+      <groupId>org.apache.axis2</groupId>
+      <artifactId>axis2-adb</artifactId>
+      <version>1.7.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.eviware</groupId>
+      <artifactId>soapui</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-core_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.ximpleware</groupId>
+      <artifactId>vtd-xml</artifactId>
+      <version>2.11</version>
+    </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>pentaho-metadata</artifactId>
+      <version>7.1.0.0-12-Modified-v1.3</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>pentaho-library</artifactId>
+          <groupId>libformula</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>pentaho-library</artifactId>
+          <groupId>libbase</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>javax.jms</groupId>
@@ -200,38 +343,254 @@
       <version>2.0.1</version>
     </dependency>
     <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-util</artifactId>
-      <version>0.33.0</version>
+      <groupId>net.sf.flexjson</groupId>
+      <artifactId>flexjson</artifactId>
+      <version>2.1</version>
     </dependency>
-   <!-- <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-    </dependency>-->
+    <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka_2.10</artifactId>
+      <version>0.8.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.geolatte</groupId>
+      <artifactId>geolatte-geom</artifactId>
+      <version>1.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.cargo</groupId>
+      <artifactId>cargo-core-api-container</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.quartz-scheduler</groupId>
+      <artifactId>quartz-jobs</artifactId>
+      <version>2.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libserializer</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vividsolutions</groupId>
+      <artifactId>jts</artifactId>
+      <version>1.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>librepository</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.ws.security</groupId>
+      <artifactId>wss4j</artifactId>
+      <version>1.6.19</version>
+    </dependency>
+    <dependency>
+      <groupId>opensymphony</groupId>
+      <artifactId>oscache</artifactId>
+      <version>2.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.relevantcodes</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>2.41.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.23.1</version>
+    </dependency>
     <dependency>
       <groupId>com.github.junrar</groupId>
       <artifactId>junrar</artifactId>
       <version>0.7</version>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.xdas4j</groupId>
-      <artifactId>logger</artifactId>
-      <version>0.1.0</version>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>13.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libdocbundle</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium.client-drivers</groupId>
+      <artifactId>selenium-java-client-driver</artifactId>
+      <version>1.0.2</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.aspose</groupId>
+      <artifactId>aspose-diagram</artifactId>
+      <version>19.12</version>
+      <classifier>jdk16</classifier>
+    </dependency>
+    <dependency>
+      <groupId>net.minidev</groupId>
+      <artifactId>json-smart</artifactId>
+      <version>2.2.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.opentracing</groupId>
+      <artifactId>opentracing-util</artifactId>
+      <version>0.33.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.1-api</artifactId>
+      <version>1.0.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaxt-core</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jtidy</groupId>
+      <artifactId>jtidy</artifactId>
+      <version>r938</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+      <version>${cxf.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+          <groupId>org.apache.cxf</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-archive-browsing</artifactId>
+      <version>5.0.0alpha-200607201-119</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-xc</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+    <dependency>
+      <groupId>eigenbase</groupId>
+      <artifactId>eigenbase-xom</artifactId>
+      <version>1.3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.leroyguillaume</groupId>
+      <artifactId>keycloak-bcrypt</artifactId>
+      <version>1.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>legacy-functions</artifactId>
+      <version>${pentaho.reporting.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-frontend-jaxrs</artifactId>
+      <version>2.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.openjpa</groupId>
+      <artifactId>openjpa-all</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>android.googlesource.com</groupId>
+      <artifactId>platform.frameworks.base</artifactId>
+      <version>android10-release</version>
+    </dependency>
+    <dependency>
+      <groupId>org.uncommons</groupId>
+      <artifactId>reportng</artifactId>
+      <version>1.1.4</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>testng</artifactId>
+          <groupId>org.testng</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.aopalliance</groupId>
+      <artifactId>com.springsource.org.aopalliance</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle</groupId>
+      <artifactId>ojdbc7</artifactId>
+      <version>12.1.0.1</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>velocity</groupId>
+      <artifactId>velocity-dep</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.cargo</groupId>
+      <artifactId>cargo-core-api-generic</artifactId>
+      <version>1.1.3</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>commons-discovery</artifactId>
+          <groupId>commons-discovery</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.awaitility</groupId>
+      <artifactId>awaitility</artifactId>
+      <version>${awaitility.version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>net.sf.opencsv</groupId>
       <artifactId>opencsv</artifactId>
-      <version>2.3</version>
+      <version>2.4</version>
     </dependency>
     <dependency>
-      <groupId>javax.jms</groupId>
-      <artifactId>jms</artifactId>
-      <version>1.1</version>
+      <groupId>com.oracle</groupId>
+      <artifactId>ojdbc6</artifactId>
+      <version>11.2.0.3</version>
     </dependency>
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.0.5</version>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-server-spi-private</artifactId>
+      <version>${keycloak.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.saxon</groupId>
+      <artifactId>saxon</artifactId>
+      <version>8.7</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-email</artifactId>
+      <version>1.5</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.markusbernhardt</groupId>
+      <artifactId>robotframework-selenium2library-java</artifactId>
+      <version>1.4.0.4</version>
     </dependency>
     <dependency>
       <groupId>org.perf4j</groupId>
@@ -239,20 +598,71 @@
       <version>0.9.13</version>
     </dependency>
     <dependency>
-      <groupId>io.opentracing</groupId>
-      <artifactId>opentracing-api</artifactId>
-      <version>0.33.0</version>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libfonts</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>net.percederberg.mibble</groupId>
-      <artifactId>mibble-mibs</artifactId>
-      <version>2.9.3</version>
-      <scope>runtime</scope>
+      <groupId>org.saikuanalytics</groupId>
+      <artifactId>saiku-olap-util</artifactId>
+      <version>3.8.7</version>
     </dependency>
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-jpamodelgen</artifactId>
-      <version>5.4.6.Final</version>
+      <groupId>bi.meteorite</groupId>
+      <artifactId>licenseserver-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.camunda.bpm.springboot.example</groupId>
+      <artifactId>bpmn-process-engine</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>wizard-core</artifactId>
+      <version>${pentaho.reporting.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>de.bechte.junit</groupId>
+      <artifactId>junit-hierarchicalcontextrunner</artifactId>
+      <version>4.12.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.cache</groupId>
+      <artifactId>cache-api</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>classic-extensions-cda</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.codehaus.xdas4j</groupId>
+      <artifactId>logger</artifactId>
+      <version>0.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.lowagie</groupId>
+      <artifactId>itext-rtf</artifactId>
+      <version>2.1.7</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>bctsp-jdk14</artifactId>
+          <groupId>bouncycastle</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>bcprov-jdk14</artifactId>
+          <groupId>bouncycastle</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.tomcat</groupId>
@@ -260,72 +670,99 @@
       <version>8.5.34</version>
       <scope>provided</scope>
     </dependency>
-    <!--<dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-websocket</artifactId>
+    <dependency>
+      <groupId>org.openconext</groupId>
+      <artifactId>mujina-common</artifactId>
+      <version>5.0.8</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j-to-slf4j</artifactId>
+          <groupId>org.apache.logging.log4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>demo-console</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>jodatime</groupId>
-      <artifactId>jodatime</artifactId>
-      <version>2.7</version>
-    </dependency>
-   <!-- <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>jstl</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>com.fasterxml.jackson.dataformat</groupId>
-      <artifactId>jackson-dataformat-csv</artifactId>
-      <version>2.8.9</version>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libsparkline</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>net.percederberg.mibble</groupId>
-      <artifactId>mibble</artifactId>
-      <version>2.9.3</version>
-    </dependency>
-   <!-- <dependency>
-      <groupId>javax.cache</groupId>
-      <artifactId>cache-api</artifactId>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libswing</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.webjars</groupId>
-      <artifactId>webjars-locator</artifactId>
-    </dependency>-->
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-jcl</artifactId>
+      <version>${log4j.version}</version>
+      <scope>runtime</scope>
+    </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-mock</artifactId>
-      <version>2.0.8</version>
+      <groupId>org.jpedal</groupId>
+      <artifactId>jpedal</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>pentaho</groupId>
+      <artifactId>mondrian</artifactId>
+      <version>4.3.0.1.2-SPARK</version>
+    </dependency>
+    <dependency>
+      <groupId>org.netbeans</groupId>
+      <artifactId>openide-util</artifactId>
+      <version>200507110943</version>
+    </dependency>
+    <dependency>
+      <groupId>org.orbisgis</groupId>
+      <artifactId>h2gis</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-httpclient</groupId>
+      <artifactId>commons-httpclient</artifactId>
+      <version>3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.drill.exec</groupId>
+      <artifactId>drill-jdbc</artifactId>
+      <version>1.16.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j-over-slf4j</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>guava</artifactId>
+          <groupId>com.google.guava</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>bcprov-jdk15on</artifactId>
+          <groupId>org.bouncycastle</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>legacy-charts</artifactId>
+      <version>${pentaho.reporting.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>log4j</artifactId>
           <groupId>log4j</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>commons-logging</artifactId>
-          <groupId>commons-logging</groupId>
-        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-jul</artifactId>
-      <version>${log4j.version}</version>
-      <scope>runtime</scope>
+      <groupId>org.keycloak.bom</groupId>
+      <artifactId>keycloak-adapter-bom</artifactId>
+      <version>4.8.2.Final</version>
+      <type>pom</type>
+      <scope>import</scope>
     </dependency>
     <dependency>
-      <groupId>io.opentracing.contrib</groupId>
-      <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
-      <version>3.1.2</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>opentracing-spring-cloud-kafka-starter</artifactId>
-          <groupId>io.opentracing.contrib</groupId>
-        </exclusion>
-      </exclusions>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>classic-extensions-olap4j</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
       <groupId>org.keycloak</groupId>
@@ -334,113 +771,290 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>ch.ethz.ganymed</groupId>
-      <artifactId>ganymed-ssh2</artifactId>
-      <version>262</version>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>classic-extensions-scripting</artifactId>
+      <version>${pentaho.reporting.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
-   <!-- <dependency>
-      <groupId>org.jmock</groupId>
-      <artifactId>jmock-legacy</artifactId>
-    </dependency>-->
+    <dependency>
+      <groupId>org.jsmpp</groupId>
+      <artifactId>jsmpp</artifactId>
+      <version>2.3.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.soulwing.snmp</groupId>
+      <artifactId>tnm4j</artifactId>
+      <version>1.1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.jsi</groupId>
+      <artifactId>jsi</artifactId>
+      <version>1.1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>net.percederberg.mibble</groupId>
+      <artifactId>mibble</artifactId>
+      <version>2.9.3</version>
+    </dependency>
+    <dependency>
+      <groupId>io.opentracing.contrib</groupId>
+      <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
+      <version>3.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.perf4j</groupId>
+      <artifactId>perf4j-4ajc</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>browser</groupId>
+      <artifactId>browser</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libformula-ui</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-mllib_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.resteasy</groupId>
+      <artifactId>resteasy-jackson2-provider</artifactId>
+      <version>3.1.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml</groupId>
+      <artifactId>jaxrpc-api</artifactId>
+      <version>1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>bi.meteorite</groupId>
+      <artifactId>saiku-annotations</artifactId>
+      <version>3.8.3</version>
+    </dependency>
     <dependency>
       <groupId>asm</groupId>
       <artifactId>asm-all</artifactId>
       <version>2.2</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
-      <version>3.1.12</version>
+      <groupId>com.bedatadriven</groupId>
+      <artifactId>jackson-datatype-jts</artifactId>
+      <version>2.4</version>
     </dependency>
-    <!-- <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-aspects</artifactId>
-    </dependency>-->
     <dependency>
-      <groupId>org.apache.kafka</groupId>
-      <artifactId>kafka_2.12</artifactId>
-      <version>0.10.1.1</version>
-      <scope>compile</scope>
+      <groupId>javax.xml.ws</groupId>
+      <artifactId>jaxws-api</artifactId>
+      <version>2.2</version>
+    </dependency>
+    <dependency>
+      <groupId>databricks</groupId>
+      <artifactId>tensorframes</artifactId>
+      <version>0.2.9-s</version>
+    </dependency>
+    <dependency>
+      <groupId>nz.net.ultraq.thymeleaf</groupId>
+      <artifactId>thymeleaf-layout-dialect</artifactId>
+      <version>2.4.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>jmxri</artifactId>
-          <groupId>com.sun.jmx</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jms</artifactId>
-          <groupId>javax.jms</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jmxtools</artifactId>
-          <groupId>com.sun.jdmk</groupId>
+          <artifactId>groovy</artifactId>
+          <groupId>org.codehaus.groovy</groupId>
         </exclusion>
       </exclusions>
     </dependency>
-    <!--<dependency>
-      <groupId>net.sf.jasperreports</groupId>
-      <artifactId>jasper-custom-calibri-font</artifactId>
-    </dependency>-->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>eigenbase</groupId>
+      <artifactId>eigenbase-resgen</artifactId>
+      <version>1.3.0.11873</version>
+    </dependency>
+    <dependency>
+      <groupId>net.tanesha.recaptcha4j</groupId>
+      <artifactId>recaptcha4j</artifactId>
+      <version>0.0.7</version>
+    </dependency>
     <dependency>
       <groupId>com.itextpdf</groupId>
       <artifactId>itextpdf</artifactId>
       <version>5.5.5</version>
     </dependency>
     <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaxt-core</artifactId>
-      <version>1.6.2</version>
-    </dependency>
-   <!-- <dependency>
-      <groupId>com.github.seancfoley</groupId>
-      <artifactId>ipaddress</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>org.codehaus.cargo</groupId>
-      <artifactId>cargo-core-container-tomcat</artifactId>
-      <version>1.1.3</version>
+      <groupId>org.pentaho</groupId>
+      <artifactId>libbase</artifactId>
+      <version>1.2.8</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.tomcat</groupId>
-      <artifactId>com.springsource.org.apache.tomcat.jdbc</artifactId>
-      <version>1.0.9.3</version>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libformat</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.alicebot.ab</groupId>
-      <artifactId>ab</artifactId>
-      <version>4.0.4-SNAPSHOT</version>
+      <groupId>org.modelmapper</groupId>
+      <artifactId>modelmapper</artifactId>
+      <version>2.3.5</version>
     </dependency>
     <dependency>
-      <groupId>commons-beanutils</groupId>
-      <artifactId>commons-beanutils-core</artifactId>
-      <version>1.8.0</version>
+      <groupId>com.googlecode.jsontoken</groupId>
+      <artifactId>jsontoken</artifactId>
+      <version>1.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>google-collections</artifactId>
+          <groupId>com.google.collections</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.java-websocket</groupId>
-      <artifactId>Java-WebSocket</artifactId>
-      <version>1.4.0</version>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>2.4.17</version>
     </dependency>
     <dependency>
-      <groupId>com.squareup.okhttp3</groupId>
-      <artifactId>okhttp</artifactId>
-      <version>3.11.0</version>
-    </dependency>
-    <!--<dependency>
-      <groupId>org.jmock</groupId>
-      <artifactId>jmock-junit4</artifactId>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libxml</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
     <dependency>
-      <groupId>net.sf.jasperreports</groupId>
-      <artifactId>jasperreports-fonts</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>com.github.leroyguillaume</groupId>
-      <artifactId>keycloak-bcrypt</artifactId>
-      <version>1.2.0</version>
+      <groupId>javax.ws.rs</groupId>
+      <artifactId>jsr311-api</artifactId>
+      <version>1.1</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.nifi</groupId>
-      <artifactId>nifi-flume-processors</artifactId>
-      <version>1.4.0</version>
+      <groupId>org.keycloak</groupId>
+      <artifactId>keycloak-model-infinispan</artifactId>
+      <version>${keycloak.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>javase</artifactId>
+      <version>3.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf</groupId>
+      <artifactId>ha-javamail</artifactId>
+      <version>${ha-javamail.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.wink</groupId>
+      <artifactId>wink-json4j-provider</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-server</artifactId>
+      <version>2.24.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>bcprov-jdk15on</artifactId>
+          <groupId>org.bouncycastle</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.eviware</groupId>
+      <artifactId>soapui-xmlbeans</artifactId>
+      <version>4.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.percederberg.mibble</groupId>
+      <artifactId>mibble-mibs</artifactId>
+      <version>2.9.3</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.45</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libloader</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>fr.pilato.elasticsearch.river</groupId>
+      <artifactId>fsriver</artifactId>
+      <version>${fsriver.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.engine</groupId>
+      <artifactId>classic-extensions-xpath</artifactId>
+      <version>${pentaho.reporting.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>log4j</artifactId>
+          <groupId>log4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.google.zxing</groupId>
+      <artifactId>core</artifactId>
+      <version>3.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>3.2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.activiti</groupId>
+      <artifactId>activiti-engine</artifactId>
+      <version>${activiti.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-math</groupId>
+      <artifactId>commons-math</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springdoc</groupId>
+      <artifactId>springdoc-openapi-ui</artifactId>
+      <version>1.2.30</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.jcr</groupId>
+      <artifactId>jcr</artifactId>
+      <version>2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming-kafka-0-8_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-repl_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse</groupId>
+      <artifactId>osgi</artifactId>
+      <version>3.10.0-v20140606-1445</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.curator</groupId>
@@ -455,46 +1069,61 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.simplejavamail</groupId>
+      <artifactId>simple-java-mail</artifactId>
+      <version>5.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.udojava</groupId>
+      <artifactId>EvalEx</artifactId>
+      <version>1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>com.springsource.org.apache.tomcat.jdbc</artifactId>
+      <version>1.0.9.3</version>
+    </dependency>
+    <dependency>
       <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-slf4j-impl</artifactId>
+      <artifactId>log4j-jul</artifactId>
       <version>${log4j.version}</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
-      <groupId>org.soulwing.snmp</groupId>
-      <artifactId>tnm4j</artifactId>
-      <version>1.1.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>net.minidev</groupId>
-      <artifactId>json-smart</artifactId>
-      <version>2.2.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.cxf</groupId>
-      <artifactId>cxf-rt-frontend-jaxrs</artifactId>
-      <version>3.1.12</version>
-    </dependency>
-   <!-- <dependency>
-      <groupId>io.micrometer</groupId>
-      <artifactId>micrometer-registry-prometheus</artifactId>
-    </dependency>-->
-    <dependency>
-      <groupId>net.sf.jsi</groupId>
-      <artifactId>jsi</artifactId>
-      <version>1.1.0-SNAPSHOT</version>
-      <scope>compile</scope>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming_${scala.version}</artifactId>
+      <version>${spark.version}</version>
     </dependency>
     <dependency>
       <groupId>org.codehaus.cargo</groupId>
-      <artifactId>cargo-core-api-generic</artifactId>
+      <artifactId>cargo-core-container-tomcat</artifactId>
       <version>1.1.3</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>commons-discovery</artifactId>
-          <groupId>commons-discovery</groupId>
-        </exclusion>
-      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-all-custom</artifactId>
+      <version>5.15.10.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.databricks</groupId>
+      <artifactId>spark-xml_2.11</artifactId>
+      <version>0.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.opentracing</groupId>
+      <artifactId>opentracing-api</artifactId>
+      <version>0.33.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-yarn_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mortbay.jetty</groupId>
+      <artifactId>jetty-util</artifactId>
+      <version>7.0.0.pre5</version>
     </dependency>
     <dependency>
       <groupId>org.activiti</groupId>
@@ -524,9 +1153,45 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka_${scala.version}</artifactId>
+      <version>${kafka.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.lettuce</groupId>
+      <artifactId>lettuce-core</artifactId>
+      <version>5.1.7.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>com.qmino</groupId>
+      <artifactId>miredot-annotations</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.alicebot.ab</groupId>
+      <artifactId>ab</artifactId>
+      <version>4.0.4-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jsi</groupId>
+      <artifactId>jsi</artifactId>
+      <version>1.1.0-SNAPSHOT</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.datasyslab</groupId>
+      <artifactId>geospark-sql_2.3</artifactId>
+      <version>1.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libbase</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.keycloak</groupId>
       <artifactId>keycloak-model-jpa</artifactId>
-      <version>11.0.2</version>
+      <version>${keycloak.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>log4j</artifactId>
@@ -539,58 +1204,117 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.eclipse.jetty.websocket</groupId>
-      <artifactId>websocket-server</artifactId>
-      <version>${websocket.version}</version>
+      <groupId>org.apache.kafka</groupId>
+      <artifactId>kafka_2.12</artifactId>
+      <version>0.10.1.1</version>
+      <scope>compile</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>jmxri</artifactId>
+          <groupId>com.sun.jmx</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jms</artifactId>
+          <groupId>javax.jms</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>jmxtools</artifactId>
+          <groupId>com.sun.jdmk</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.jsmpp</groupId>
-      <artifactId>jsmpp</artifactId>
-      <version>2.3.5</version>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libformula</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
-   <!-- <dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>bootstrap</artifactId>
-    </dependency>-->
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-dbcp2</artifactId>
-      <version>2.0.1</version>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>libpixie</artifactId>
+      <version>${pentaho.reporting.version}</version>
     </dependency>
-    <!--<dependency>
-      <groupId>org.hamcrest</groupId>
-      <artifactId>hamcrest-library</artifactId>
-      <scope>test</scope>
-    </dependency>-->
     <dependency>
-      <groupId>javax.websocket</groupId>
-      <artifactId>javax.websocket-api</artifactId>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-examples</artifactId>
+      <version>3.11</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-streaming-flume_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-log4j12</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>javax.transaction</groupId>
+      <artifactId>jta</artifactId>
       <version>1.1</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.activemq</groupId>
-      <artifactId>activemq-all-custom</artifactId>
-      <version>5.10.0</version>
+      <groupId>org.jasig.cas.client</groupId>
+      <artifactId>cas-client-core</artifactId>
+      <version>3.6.1</version>
     </dependency>
     <dependency>
-      <groupId>org.keycloak</groupId>
-      <artifactId>keycloak-server-spi-private</artifactId>
-      <version>${keycloak.version}</version>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils-core</artifactId>
+      <version>1.8.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.pentaho.reporting.library</groupId>
+      <artifactId>flute</artifactId>
+      <version>${pentaho.reporting.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.wsdl</groupId>
+      <artifactId>wsdl</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-hive_${scala.version}</artifactId>
+      <version>${spark.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.0</version>
       <scope>provided</scope>
     </dependency>
-    <!--<dependency>
-      <groupId>org.webjars.bower</groupId>
-      <artifactId>adapter.js</artifactId>
-    </dependency>-->
-    <!--<dependency>
-      <groupId>org.apache.tomcat.embed</groupId>
-      <artifactId>tomcat-embed-jasper</artifactId>
-      <scope>provided</scope>
-    </dependency>-->
     <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-email</artifactId>
-      <version>1.5</version>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>5.8</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>2.6.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.owasp.esapi.contrib</groupId>
+      <artifactId>esapi-spring-authenticator</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.glassfish</groupId>
+      <artifactId>javax.faces</artifactId>
+      <version>${jsf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-firefox-driver</artifactId>
+      <version>2.33.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jasypt</groupId>
+      <artifactId>jasypt</artifactId>
+      <version>1.9.2</version>
     </dependency>
   </dependencies>
   <build>
