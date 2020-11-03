@@ -67,10 +67,10 @@
       <artifactId>jasper-custom-font-arial</artifactId>
       <version>1.0.0</version>
     </dependency>
-    <dependency>
+  <!--  <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>draggabilly</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>opensymphony</groupId>
       <artifactId>oscache</artifactId>
@@ -117,10 +117,10 @@
       <version>${log4j.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>jquery</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>bootstrap</artifactId>
@@ -141,14 +141,14 @@
       <artifactId>groovy-all</artifactId>
       <version>2.4.11</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>ekko-lightbox</artifactId>
     </dependency>
     <dependency>
       <groupId>org.kurento</groupId>
       <artifactId>kurento-client</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.spark</groupId>
       <artifactId>spark-sql_${scala.version}</artifactId>
@@ -202,10 +202,10 @@
       <artifactId>opentracing-util</artifactId>
       <version>0.33.0</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.github.junrar</groupId>
       <artifactId>junrar</artifactId>
@@ -258,23 +258,23 @@
       <version>8.5.34</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-websocket</artifactId>
     </dependency>
     <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>demo-console</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>jodatime</groupId>
       <artifactId>jodatime</artifactId>
       <version>2.7</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.fasterxml.jackson.dataformat</groupId>
       <artifactId>jackson-dataformat-csv</artifactId>
@@ -285,14 +285,14 @@
       <artifactId>mibble</artifactId>
       <version>2.9.3</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>javax.cache</groupId>
       <artifactId>cache-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>webjars-locator</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-mock</artifactId>
@@ -336,10 +336,10 @@
       <artifactId>ganymed-ssh2</artifactId>
       <version>262</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>org.jmock</groupId>
       <artifactId>jmock-legacy</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>asm</groupId>
       <artifactId>asm-all</artifactId>
@@ -350,10 +350,10 @@
       <artifactId>cxf-spring-boot-starter-jaxws</artifactId>
       <version>3.1.12</version>
     </dependency>
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-aspects</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.kafka</groupId>
       <artifactId>kafka_2.12</artifactId>
@@ -374,10 +374,10 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasper-custom-calibri-font</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.itextpdf</groupId>
       <artifactId>itextpdf</artifactId>
@@ -388,10 +388,10 @@
       <artifactId>javaxt-core</artifactId>
       <version>1.6.2</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>com.github.seancfoley</groupId>
       <artifactId>ipaddress</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.codehaus.cargo</groupId>
       <artifactId>cargo-core-container-tomcat</artifactId>
@@ -422,14 +422,14 @@
       <artifactId>okhttp</artifactId>
       <version>3.11.0</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.jmock</groupId>
       <artifactId>jmock-junit4</artifactId>
     </dependency>
     <dependency>
       <groupId>net.sf.jasperreports</groupId>
       <artifactId>jasperreports-fonts</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>com.github.leroyguillaume</groupId>
       <artifactId>keycloak-bcrypt</artifactId>
@@ -473,10 +473,10 @@
       <artifactId>cxf-rt-frontend-jaxrs</artifactId>
       <version>3.1.12</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>net.sf.jsi</groupId>
       <artifactId>jsi</artifactId>
@@ -546,20 +546,20 @@
       <artifactId>jsmpp</artifactId>
       <version>2.3.5</version>
     </dependency>
-    <dependency>
+   <!-- <dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>bootstrap</artifactId>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-dbcp2</artifactId>
       <version>2.0.1</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.hamcrest</groupId>
       <artifactId>hamcrest-library</artifactId>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>javax.websocket</groupId>
       <artifactId>javax.websocket-api</artifactId>
@@ -576,15 +576,15 @@
       <version>${keycloak.version}</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.webjars.bower</groupId>
       <artifactId>adapter.js</artifactId>
-    </dependency>
-    <dependency>
+    </dependency>-->
+    <!--<dependency>
       <groupId>org.apache.tomcat.embed</groupId>
       <artifactId>tomcat-embed-jasper</artifactId>
       <scope>provided</scope>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-email</artifactId>
